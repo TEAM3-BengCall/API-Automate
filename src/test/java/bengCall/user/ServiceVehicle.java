@@ -1,2 +1,4 @@
-package bengCall.user;public class ServiceVehicle {
+package bengCall.user;
+
+public class ServiceVehicle {
 }

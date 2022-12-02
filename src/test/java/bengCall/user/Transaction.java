@@ -1,2 +1,4 @@
-package bengCall.user;public class Transaction {
+package bengCall.user;
+
+public class Transaction {
 }

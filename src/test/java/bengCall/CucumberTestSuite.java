@@ -1,4 +1,4 @@
-package bengCall;
+package Bengcall;
 
 import io.cucumber.junit.CucumberOptions;
 import net.serenitybdd.cucumber.CucumberWithSerenity;
