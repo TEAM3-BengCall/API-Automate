@@ -7,12 +7,10 @@ import io.cucumber.java.en.When;
 import io.restassured.http.ContentType;
 import io.restassured.module.jsv.JsonSchemaValidator;
 import net.serenitybdd.rest.SerenityRest;
-import org.openqa.selenium.json.Json;
 
 import java.io.File;
 
 import static bengCall.admin.adminAPI.*;
-import static org.hamcrest.CoreMatchers.equalTo;
 
 public class adminTransactionSteps {
     @Given("Get transaction with valid parameter {int}")
