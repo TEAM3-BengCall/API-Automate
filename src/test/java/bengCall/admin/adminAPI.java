@@ -2,8 +2,8 @@ package bengCall.admin;
 
 public class adminAPI {
     public static final String BASE_URL = "https://project-edu.online";
-    public static final String DIR = System.getProperty("user.dir");
-    public static final String JSON_FILE = DIR + "src/test/resources/jsonFile";
+//    public static final String DIR = System.getProperty("user.dir");
+    public static final String JSON_FILE = "src/test/resources/jsonFile";
     public static final String POST_LOGIN_ADMIN = BASE_URL+"/login";
     public static final String GET_ALL_VEHICLE_ADMIN = BASE_URL+"/vehicle";
     public static final String GET_ALL_VEHICLE_ADMIN_INVALID_PATH = BASE_URL+"/vehicless";
