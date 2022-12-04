@@ -23,7 +23,7 @@ Feature: Admin Transaction
     Given Get transaction with invalid token auth with parameter <id>
     When Send request get transaction
     Then Response API should return 401 Unauthorized
-    And Validate json schema
+    And Validate invalid json schema
     And Json response contain "invalid or expired jwt"
     Examples:
       | id  |
@@ -40,7 +40,7 @@ Feature: Admin Transaction
     Given Get all transaction with invalid token auth
     When Send request get all transaction
     Then Response API should return 401 Unauthorized
-    And Validate json schema
+    And Validate invalid json schema
     And Json response contain "invalid or expired jwt"
 
   Scenario Outline: Put Update transaction with valid id
@@ -53,11 +53,11 @@ Feature: Admin Transaction
       | id  |
       | 230 |
 
-  Scenario Outline: Put Update transaction with valid token auth
+  Scenario Outline: Put Update transaction with invalid token auth
     Given Set put update transaction with invalid token auth valid <id>
     When Send request put transaction
     Then Response API should return 401 Unauthorized
-    And Validate json schema
+    And Validate invalid json schema
     And Json response contain "invalid or expired jwt"
     Examples:
       | id |
@@ -67,5 +67,5 @@ Feature: Admin Transaction
     Given Set delete transaction with valid 1
     When Send request delete transaction
     Then Response API should return 202 Accepted
-    And Validate json schema
+    And Validate delete json schema
     And Json response contain "Success Cancel Transaction Service"

@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$ref": "#/definitions/Welcome1",
+  "definitions": {
+    "Welcome1": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "data": {
+          "$ref": "#/definitions/Data"
+        },
+        "message": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "data",
+        "message"
+      ],
+      "title": "Welcome1"
+    },
+    "Data": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "name_vehicle": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name_vehicle"
+      ],
+      "title": "Data"
+    }
+  }
+}
