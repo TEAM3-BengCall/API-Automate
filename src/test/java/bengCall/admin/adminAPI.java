@@ -22,7 +22,7 @@ public class adminAPI {
     public static final String GET_DETAIL_TRANSACTION_ADMIN_SPEC_CHAR = BASE_URL + "/transaction/{character}";
     public static final String GET_TRANSACTION_ADMIN_VALID_PATH = BASE_URL+ "/admin/transaction";
     public static final String GET_TRANSACTION_ADMIN_INVALID_PATH = BASE_URL+ "/admin/transaction/dhuaar";
-    public static final String PUT_TRANSACTION_ADMIN  = BASE_URL+ "/admin/transaction/1";
+    public static final String PUT_TRANSACTION_ADMIN  = BASE_URL+ "/admin/transaction/{id}";
     public static final String PUT_TRANSACTION_ADMIN_INVALID = BASE_URL+ "/admin/transaction/HAHA";
     public static final String DELETE_CANCEL_TRANSACTION_ADMIN = BASE_URL+ "/admin/transaction/{id}";
     public static final String GET_VEHICLESERVICE_ADMIN = BASE_URL + "/admin/vehicleservice";

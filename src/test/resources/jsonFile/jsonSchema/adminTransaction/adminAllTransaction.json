@@ -1,0 +1,69 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$ref": "#/definitions/Welcome2",
+  "definitions": {
+    "Welcome2": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "data": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Datum"
+          }
+        },
+        "message": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "data",
+        "message"
+      ],
+      "title": "Welcome2"
+    },
+    "Datum": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "invoice": {
+          "type": "integer"
+        },
+        "fullname": {
+          "$ref": "#/definitions/Fullname"
+        },
+        "date": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "total": {
+          "type": "integer"
+        },
+        "status": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "date",
+        "fullname",
+        "id",
+        "invoice",
+        "status",
+        "total"
+      ],
+      "title": "Datum"
+    },
+    "Fullname": {
+      "type": "string",
+      "enum": [
+        "Test",
+        "Admin Bengcall",
+        "Destiana Ayu"
+      ],
+      "title": "Fullname"
+    }
+  }
+}
