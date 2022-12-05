@@ -7,4 +7,4 @@ Feature: Login admin Feature testing
     When Send Request admin login
     Then Status code 202 Accepted
     And Login response body should contain full name "Admin Bengcall" role 1 massage "Success to login"
-    And Validate Login successful json schema
+    And Validate Login succesfull json schema

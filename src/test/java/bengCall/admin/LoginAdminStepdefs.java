@@ -1,7 +1,8 @@
-package Bengcall.Admin;
+package bengCall.admin;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.restassured.module.jsv.JsonSchemaValidator;
 import net.serenitybdd.rest.SerenityRest;
@@ -12,89 +13,39 @@ import static org.hamcrest.Matchers.equalTo;
 public class LoginAdminStepdefs {
 
     @Steps
-    BengcallAdminAPI bengcallAdminAPI;
+    AdminLoginAPI adminLoginAPI;
 
-    @Given("Admin login with valid request data")
-    public void adminLoginWithValidRequestData (){
-        File jsonFiles = new File(BengcallAdminAPI
-                .JSON_FILE+"/JsonRequestBody/Admin/Login/PostAdminLoginCustomer.json");
-        bengcallAdminAPI.postLoginAdmin (jsonFiles);}
+    //Login Admin with Valid data
+    @Given("User login with file json")
+    public void UserLoginWithFileJson(){
+        File json = new File(AdminLoginAPI.JSON_REQ_BODY + "/LoginAdminRequestBodyJson.json");
+        adminLoginAPI.LoginAdmin(json);
+    }
 
-    @When("Send request admin login")
-    public void sendRequestAdminLogin(){
-        SerenityRest
-                .when()
-                .post(BengcallAdminAPI.POST_LOGIN_ADMIN);}
+    @When("Send Request admin login")
+    public void SendRequestAdminLogin() {
+        SerenityRest.when().post(AdminLoginAPI.POST_LOGIN_ADMIN);
+    }
 
-    @And("Post admin login valid credentials assert json validation")
-    public void postAdminLoginValidCredentialsAssertJsonValidation(){
-        File jsonFile = new File(BengcallAdminAPI
-                .JSON_FILE+"/JsonSchemaValidation/Admin/Login/PostAdminLoginJsonSchemaValidation.json");
-        SerenityRest
-                .then()
-                .assertThat()
-                .body(JsonSchemaValidator.matchesJsonSchema(jsonFile));}
+    @Then("Status code {int} Accepted")
+    public void statusCodeAccepted(int Accepted) {
+        SerenityRest.then().statusCode(Accepted);
+    }
 
-    @Given("Admin login with invalid request data")
-    public void adminLoginWithInvalidRequestData(){
-        File jsonFiles = new File(BengcallAdminAPI
-                .JSON_FILE+"/JsonRequestBody/Admin/Login/PostAdminLoginUnregistered.json");
-        bengcallAdminAPI.postLoginAdmin (jsonFiles);}
+    @And("Login response body should contain full name {string} role {int} massage {string}")
+    public void loginResponseBodyShouldContainFullNameRoleMassage(String fullname, int role, String massage) {
+        SerenityRest.then().body(AdminLoginResponse.FULL_NAME, equalTo(fullname))
+                .body(AdminLoginResponse.ROLE, equalTo(role))
+                .body(AdminLoginResponse.MASSAGE, equalTo(massage));
+    }
 
-    @And("Post admin login valid credentials response should contain fullname {} role {} and message {}")
-    public void postAdminLoginValidCredentialsResponseShouldContainFullnameRoleAndMessage(String fullname, int role, String message) {
-        SerenityRest
-                .then()
-                .body(ResponseAdmin.FULLNAME, equalTo(fullname))
-                .body(ResponseAdmin.ROLE, equalTo(role))
-                .body(ResponseAdmin.MESSAGE, equalTo(message));}
+    @And("Validate Login successfully json schema")
+    public void validateLoginSuccesfullJsonSchema() {
+        File json = new File(AdminLoginAPI.JSON_SCHEMA_VAL + "/LoginAdminJsonSchemaValidation.json");
+        SerenityRest.then().assertThat().body(JsonSchemaValidator.matchesJsonSchema(json));
+    }
 
-    @And("Post admin login invalid credentials assert json validation")
-    public void postAdminLoginInvalidCredentialsAssertJsonValidation(){
-        File jsonFile = new File(BengcallAdminAPI
-                .JSON_FILE+ "/JsonSchemaValidation/Admin/Login/PostAdminLoginInvalidJsonSchemaValidation.json");
-        SerenityRest
-                .then()
-                .assertThat()
-                .body(JsonSchemaValidator.matchesJsonSchema(jsonFile));}
 
-    @Given("Admin login with empty email value")
-    public void adminLoginWithEmptyEmailValue(){
-        File jsonFiles = new File(BengcallAdminAPI
-                .JSON_FILE+"/JsonRequestBody/Admin/Login/PostAdminLoginEmptyEmail.json");
-        bengcallAdminAPI.postLoginAdmin (jsonFiles);}
-
-    @And("Post admin login with invalid value assert json validation")
-    public void postAdminLoginWithInvalidValueAssertJsonValidation(){
-        File jsonFile = new File(BengcallAdminAPI
-                .JSON_FILE+"/JsonSchemaValidation/Admin/Login/PostAdminLoginInvalidJsonSchemaValidation.json");
-        SerenityRest
-                .then()
-                .assertThat()
-                .body(JsonSchemaValidator.matchesJsonSchema(jsonFile));}
-
-    @Given("Admin login with empty password value")
-    public void adminLoginWithEmptyPasswordValue(){
-        File jsonFiles = new File(BengcallAdminAPI
-                .JSON_FILE+"/JsonRequestBody/Admin/Login/PostAdminLoginEmptyPassword.json");
-        bengcallAdminAPI.postLoginAdmin (jsonFiles);}
-
-    @Given("Admin login with special character")
-    public void adminLoginWithSpecialCharacter() {
-        File jsonFiles = new File(BengcallAdminAPI
-                .JSON_FILE+"/JsonRequestBody/Admin/Login/PostAdminLoginSpecialChar.json");
-        bengcallAdminAPI.postLoginAdmin (jsonFiles);}
-
-    @Given("Admin login with empty email and password value")
-    public void adminLoginWithEmptyEmailAndPasswordValue() {
-        File jsonFiles = new File(BengcallAdminAPI
-                .JSON_FILE+"/JsonRequestBody/Admin/Login/PostAdminLoginEmptyEmailAndPassword.json");
-        bengcallAdminAPI.postLoginAdmin (jsonFiles);}
-
-    @And("Post admin login invalid response should contain {}")
-    public void postAdminLoginInvalidResponseShouldContain(String message) {
-        SerenityRest.then()
-                .body(ResponseAdmin.MESSAGE, equalTo(message));}
 
 
 }
