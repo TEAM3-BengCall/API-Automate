@@ -1,0 +1,8 @@
+bengCall\CucumberTestSuite.class
+bengCall\APIAndResponse\BengCallResponse.class
+bengCall\user\Transaction.class
+bengCall\admin\AdminLoginAPI.class
+bengCall\APIAndResponse\BengCallAPI.class
+bengCall\user\ServiceVehicleStepdefs.class
+bengCall\admin\LoginAdminStepdefs.class
+bengCall\user\ServiceCustomerAPI.class
