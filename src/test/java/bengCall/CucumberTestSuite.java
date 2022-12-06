@@ -1,3 +1,4 @@
+
 package bengCall;
 
 import io.cucumber.junit.CucumberOptions;
@@ -6,9 +7,8 @@ import org.junit.runner.RunWith;
 
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
-        tags = "@LoginAdmin or @ServiceVehicleCustomer or @TransactionUser",
         plugin = {"pretty"},
         features = "classpath:features"
-
 )
 public class CucumberTestSuite {}
+
