@@ -1,16 +1,13 @@
 {
   "$schema": "http://json-schema.org/draft-06/schema#",
-  "$ref": "#/definitions/Welcome1",
+  "$ref": "#/definitions/Welcome9",
   "definitions": {
-    "Welcome1": {
+    "Welcome9": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
         "data": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/Datum"
-          }
+          "$ref": "#/definitions/Data"
         },
         "message": {
           "type": "string"
@@ -20,24 +17,39 @@
         "data",
         "message"
       ],
-      "title": "Welcome1"
+      "title": "Welcome9"
     },
-    "Datum": {
+    "Data": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
         "id": {
           "type": "integer"
         },
-        "name_vehicle": {
+        "fullname": {
           "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "images": {
+          "type": "string",
+          "format": "uri",
+          "qt-uri-protocols": [
+            "https"
+          ],
+          "qt-uri-extensions": [
+            ".jpg"
+          ]
         }
       },
       "required": [
+        "email",
+        "fullname",
         "id",
-        "name_vehicle"
+        "images"
       ],
-      "title": "Datum"
+      "title": "Data"
     }
   }
 }
