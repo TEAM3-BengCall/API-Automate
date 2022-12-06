@@ -8,10 +8,6 @@ import net.thucydides.core.annotations.Steps;
 
 public class ServiceCustomerAPI {
 
-    @Steps
-    BengCallAPI bangCallAPI;
-
-
     //Get service vehicle customer with valid parameter id
     @Step("Get service vehicle customer with valid parameter id")
     public void getServiceVehicleCustomerValidId (int id){

@@ -1,0 +1,8 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Transaction user","Transaction user with invalid path","SUCCESS","2022-12-07T00:21:12.1761936+07:00[Asia/Bangkok]","0.0","0.19"
+"Transaction user","Transaction user with invalid location id","SUCCESS","2022-12-07T00:21:12.3786877+07:00[Asia/Bangkok]","0.0","1.03"
+"Transaction user","Transaction user with invalid vehicle id","SUCCESS","2022-12-07T00:21:13.4169132+07:00[Asia/Bangkok]","0.0","1.02"
+"Transaction user","Transaction user with invalid service id","SUCCESS","2022-12-07T00:21:14.4425146+07:00[Asia/Bangkok]","0.0","1.01"
+"Transaction user","Transaction user without date","SUCCESS","2022-12-07T00:21:15.4645993+07:00[Asia/Bangkok]","0.0","0.15"
+"Transaction user","Transaction user without phone number","SUCCESS","2022-12-07T00:21:15.6285205+07:00[Asia/Bangkok]","0.0","0.16"
+"Transaction user","Transaction user without Address","SUCCESS","2022-12-07T00:21:15.7974128+07:00[Asia/Bangkok]","0.0","0.17"

@@ -43,6 +43,7 @@ public class ServiceVehicleStepdefs {
     @And("Validation get vehicle service with valid parameter id")
     public void validationGetVehicleServiceWithValidParameterId() {
         File json = new File(BengCallAPI.JSON_SCHEMA_VAL_USER + "/ServiceVehiclesUserJsonSchemaValidation.json");
+        SerenityRest.then().assertThat().body(JsonSchemaValidator.matchesJsonSchema(json));
     }
 
 
@@ -133,4 +134,5 @@ public class ServiceVehicleStepdefs {
         File json = new File(BengCallAPI.JSON_SCHEMA_VAL_USER + "/ServiceVehicleInvalidUserJsonSchema.json");
         SerenityRest.then().assertThat().body(JsonSchemaValidator.matchesJsonSchema(json));
     }
+
 }

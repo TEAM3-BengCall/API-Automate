@@ -6,7 +6,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
-        tags = "@LoginAdmin or @ServiceVehicleCustomer",
+        tags = "@LoginAdmin or @ServiceVehicleCustomer or @TransactionUser",
         plugin = {"pretty"},
         features = "classpath:features"
 
