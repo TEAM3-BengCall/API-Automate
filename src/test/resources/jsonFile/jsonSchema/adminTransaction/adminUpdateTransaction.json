@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-06/schema#",
-  "$ref": "#/definitions/Welcome10",
+  "$ref": "#/definitions/Welcome1",
   "definitions": {
-    "Welcome10": {
+    "Welcome1": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
@@ -17,7 +17,7 @@
         "data",
         "message"
       ],
-      "title": "Welcome10"
+      "title": "Welcome1"
     },
     "Data": {
       "type": "object",
@@ -26,26 +26,7 @@
         "id": {
           "type": "integer"
         },
-        "location": {
-          "type": "integer"
-        },
-        "fullname": {
-          "type": "string"
-        },
-        "date": {
-          "type": "string",
-          "format": "date-time"
-        },
-        "phone": {
-          "type": "string"
-        },
-        "address": {
-          "type": "string"
-        },
         "invoice": {
-          "type": "integer"
-        },
-        "total": {
           "type": "integer"
         },
         "payment_token": {
@@ -59,38 +40,16 @@
             "https"
           ]
         },
-        "other": {
-          "type": "string"
-        },
-        "additional": {
-          "type": "integer"
-        },
         "status": {
           "type": "integer"
-        },
-        "comment": {
-          "type": "string"
-        },
-        "detail": {
-          "type": "null"
         }
       },
       "required": [
-        "additional",
-        "address",
-        "comment",
-        "date",
-        "detail",
-        "fullname",
         "id",
         "invoice",
-        "location",
-        "other",
         "payment_link",
         "payment_token",
-        "phone",
-        "status",
-        "total"
+        "status"
       ],
       "title": "Data"
     }

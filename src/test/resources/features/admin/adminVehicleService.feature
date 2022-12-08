@@ -1,3 +1,4 @@
+@VehicleServiceAsAdmin
 Feature: Vehicle Service
   Scenario: Get list vehicle service with valid token auth
     Given Get list vehicle service with valid token auth
