@@ -1,3 +1,4 @@
+@vehicleAsAdmin
 Feature: Admin Vehicle
   Scenario: Get Vehicle list
     Given Set get all vehicle with valid token auth

@@ -13,27 +13,22 @@ import static bengCall.admin.adminAPI.*;
 public class adminVehicleServiceSteps {
     @Given("Get list vehicle service with valid token auth")
     public void getListVehicleServiceWithValidTokenAuth(){
-        SerenityRest.given()
-                .header("Authorization",VALID_ADMIN_TOKEN);
+        methodAdminAPI.loginValidTokenWithoutParam();
     }
 
     @When("Send request get vehicle service")
     public void sendRequestGetVehicleService() {
-        SerenityRest.when()
-                .get(GET_VEHICLESERVICE_ADMIN);
+        methodAdminAPI.sendGetVehicleService();
     }
 
     @And("Validate list vehicle service json schema")
     public void validateListVehicleServiceJsonSchema() {
         File jsonFile = new File(JSON_FILE+"/jsonSchema/adminVehicleService/adminVehicleService.json");
-        SerenityRest.then()
-                .assertThat()
-                .body(JsonSchemaValidator.matchesJsonSchema(jsonFile));
+        methodAdminAPI.validateJsonSchema(jsonFile);
     }
 
     @Given("Get list vehicle service with invalid token auth")
     public void getListVehicleServiceWithInvalidTokenAuth() {
-        SerenityRest.given()
-                .header("Authorization",INVALID_ADMIN_TOKEN);
+        methodAdminAPI.loginInvalidTokenWithoutParam();
     }
 }

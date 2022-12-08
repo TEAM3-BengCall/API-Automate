@@ -12,7 +12,7 @@ public class adminAPI {
     public static final String DELETE_VEHICLE_TYPE_ADMIN_NO_ID = BASE_URL+"/admin/vehicle";
     public static final String DELETE_VEHICLE_TYPE_ADMIN_SPEC_CHARACTER = BASE_URL+"/admin/vehicle/{character}";
     public static final String GET_ALL_SERVICE_TYPE_ADMIN = BASE_URL+"/service/{id}";
-    public static final String GET_ALL_SERVICE_TYPE_ADMIN_SPEC_CHARACTER = BASE_URL + "/service/{character}";
+    public static final String GET_ALL_SERVICE_TYPE_ADMIN_SPEC_CHARACTER = BASE_URL + "/service/{id}";
     public static final String POST_CREATE_SERVICE_ADMIN = BASE_URL+"/admin/service";
     public static final String DELETE_SERVICE_ADMIN = BASE_URL+"/admin/service/{id}";
     public static final String DELETE_SERVICE_ADMIN_NO_ID = BASE_URL+"/admin/service";

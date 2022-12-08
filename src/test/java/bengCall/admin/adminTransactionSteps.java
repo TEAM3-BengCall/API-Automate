@@ -15,30 +15,23 @@ import static bengCall.admin.adminAPI.*;
 public class adminTransactionSteps {
     @Given("Get transaction with valid parameter {int}")
     public void getTransactionWithValidParameterId(int id){
-        SerenityRest.given()
-                .header("Authorization", VALID_ADMIN_TOKEN)
-                .pathParam("id",id);
+        methodAdminAPI.loginValidTokenWithParam(id);
     }
 
     @When("Send request get transaction")
     public void sendRequestGetTransaction() {
-        SerenityRest.when()
-                .get(GET_DETAIL_TRANSACTION_ADMIN);
+        methodAdminAPI.sendGetTransaction();
     }
 
     @And("Validate single transaction json schema")
     public void validateSingleTransactionJsonSchema() {
         File jsonFile = new File(JSON_FILE+"/jsonSchema/adminTransaction/adminSingleTransaction.json");
-        SerenityRest.then()
-                .assertThat()
-                .body(JsonSchemaValidator.matchesJsonSchema(jsonFile));
+        methodAdminAPI.validateJsonSchema(jsonFile);
     }
 
     @Given("Get transaction with invalid parameter {long}")
     public void getTransactionWithInvalidParameterId(long id) {
-        SerenityRest.given()
-                .header("Authorization", VALID_ADMIN_TOKEN)
-                .pathParam("id",id);
+        methodAdminAPI.loginValidTokenWithParamLongInt(id);
     }
 
     @Then("Response API should return {int} Not Found")
@@ -56,80 +49,64 @@ public class adminTransactionSteps {
 
     @Given("Get transaction with invalid token auth with parameter {int}")
     public void getTransactionWithInvalidTokenAuth(int id) {
-        SerenityRest.given()
-                .header("Authorization", INVALID_ADMIN_TOKEN)
-                .pathParam("id",id);
+        methodAdminAPI.loginInvalidTokenWithParam(id);
     }
 
     @Then("Response API should return {int} Unauthorized")
     public void responseAPIShouldReturnUnauthorized(int arg0) {
-        SerenityRest.then()
-                .statusCode(arg0);
+        methodAdminAPI.statusCode(arg0);
     }
 
     @Given("Get All transaction with valid token auth")
     public void getAllTransactionWithValidTokenAuth() {
-        SerenityRest.given()
-                .header("Authorization", VALID_ADMIN_TOKEN);
+        methodAdminAPI.loginValidTokenWithoutParam();
     }
 
     @When("Send request get all transaction")
     public void sendRequestGetAllTransaction() {
-        SerenityRest.when()
-                .get(GET_TRANSACTION_ADMIN_VALID_PATH);
+        methodAdminAPI.sendGetAllTransaction();
     }
 
     @And("Validate get all transaction json schema")
     public void validateGetAllTransactionJsonSchema() {
         File jsonFile = new File(JSON_FILE+"/jsonSchema/adminTransaction/adminAllTransaction.json");
-        SerenityRest.then()
-                .assertThat()
-                .body(JsonSchemaValidator.matchesJsonSchema(jsonFile));
+        methodAdminAPI.validateJsonSchema(jsonFile);
     }
 
     @Given("Get all transaction with invalid token auth")
     public void getAllTransactionWithInvalidTokenAuth() {
-        SerenityRest.given()
-                .header("Authorization", INVALID_ADMIN_TOKEN);
+        methodAdminAPI.loginInvalidTokenWithoutParam();
     }
 
     @Given("Set put update transaction with valid {int}")
     public void setPutUpdateTransactionWithValidId(int id) {
         File jsonFile = new File(JSON_FILE+"/jsonReqBody/adminTransaction/adminUpdateTransaction.json");
-        SerenityRest.given()
-                .header("Authorization", VALID_ADMIN_TOKEN)
-                .pathParam("id",id)
-                .contentType(ContentType.JSON)
-                .body(jsonFile);
+        methodAdminAPI.sendReqBodyWithValidTokenAndParam(id,jsonFile);
     }
 
     @When("Send request put transaction")
     public void sendRequestPutTransaction() {
-        SerenityRest.when()
-                .put(PUT_TRANSACTION_ADMIN);
+        methodAdminAPI.sendPutTransaction();
     }
 
     @And("Validate update transaction json schema")
     public void validateUpdateTransactionJsonSchema() {
+        File jsonFile = new File(JSON_FILE+"/jsonSchema/adminTransaction/adminUpdateTransaction.json");
+        methodAdminAPI.validateJsonSchema(jsonFile);
     }
 
     @Given("Set put update transaction with invalid token auth valid {int}")
     public void setPutUpdateTransactionWithInvalidTokenAuthValidId(int id) {
-        SerenityRest.given()
-                .header("Authorization", INVALID_ADMIN_TOKEN)
-                .pathParam("id", id);
+        methodAdminAPI.loginInvalidTokenWithParam(id);
     }
 
     @Given("Set delete transaction with valid {int}")
     public void setDeleteTransactionWithValid(int arg0) {
-        SerenityRest.given()
-                .header("Authorization", VALID_ADMIN_TOKEN)
-                .pathParam("id", arg0);
+        methodAdminAPI.loginValidTokenWithParam(arg0);
     }
 
     @When("Send request delete transaction")
     public void sendRequestDeleteTransaction() {
-        SerenityRest.when()
-                .delete(DELETE_CANCEL_TRANSACTION_ADMIN);
+        methodAdminAPI.sendDeleteTransaction();
     }
 }

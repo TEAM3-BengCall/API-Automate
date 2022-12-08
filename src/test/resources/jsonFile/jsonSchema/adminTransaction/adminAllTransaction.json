@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-06/schema#",
-  "$ref": "#/definitions/Welcome2",
+  "$ref": "#/definitions/Welcome6",
   "definitions": {
-    "Welcome2": {
+    "Welcome6": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
@@ -20,7 +20,7 @@
         "data",
         "message"
       ],
-      "title": "Welcome2"
+      "title": "Welcome6"
     },
     "Datum": {
       "type": "object",
@@ -61,7 +61,11 @@
       "enum": [
         "Test",
         "Admin Bengcall",
-        "Destiana Ayu"
+        "Destiana Ayu",
+        "Rivan",
+        "Destiana Ayu Aulia",
+        "LUKMANUL KHAKIM",
+        "Rainisa Sofhia"
       ],
       "title": "Fullname"
     }

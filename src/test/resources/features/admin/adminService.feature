@@ -1,3 +1,4 @@
+@serviceAsAdmin
 Feature: Service As Admin
   Scenario Outline: Get view all service information with valid id
     Given Set view all service information as admin with valid token and <id>

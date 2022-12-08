@@ -1,3 +1,4 @@
+@transactionAsAdmin
 Feature: Admin Transaction
   Scenario Outline: Get single transaction with valid id
     Given Get transaction with valid parameter <id>
