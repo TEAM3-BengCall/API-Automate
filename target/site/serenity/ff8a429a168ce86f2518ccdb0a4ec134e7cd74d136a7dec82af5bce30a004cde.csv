@@ -1,3 +1,0 @@
-"Story","Title","Result","Date","Stability","Duration (s)"
-"Transaction user","Get on going Transaction with invalid parameter","SUCCESS","2022-12-07T00:21:16.1473283+07:00[Asia/Bangkok]","0.0","0.14"
-"Transaction user","Get on going Transaction with invalid token","SUCCESS","2022-12-07T00:21:16.2996512+07:00[Asia/Bangkok]","0.0","0.14"

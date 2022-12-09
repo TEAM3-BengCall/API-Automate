@@ -1,6 +1,0 @@
-"Story","Title","Result","Date","Stability","Duration (s)"
-"Login admin Feature testing","Login Admin with valid email and password","SUCCESS","2022-12-07T00:21:01.8735361+07:00[Asia/Bangkok]","0.0","6.5"
-"Login admin Feature testing","Login Admin with invalid email and password","SUCCESS","2022-12-07T00:21:08.4107914+07:00[Asia/Bangkok]","0.0","0.21"
-"Login admin Feature testing","Login Admin With Invalid path","SUCCESS","2022-12-07T00:21:08.6403931+07:00[Asia/Bangkok]","0.0","0.17"
-"Login admin Feature testing","Login Admin Without Email","SUCCESS","2022-12-07T00:21:08.8299683+07:00[Asia/Bangkok]","0.0","0.18"
-"Login admin Feature testing","Login admin Without Password","SUCCESS","2022-12-07T00:21:09.0209763+07:00[Asia/Bangkok]","0.0","0.17"

@@ -1,9 +1,0 @@
-bengCall\user\TransactionCustomerStepdefs.class
-bengCall\admin\AdminLoginAPI.class
-bengCall\APIAndResponse\BengCallAPI.class
-bengCall\user\ServiceVehicleStepdefs.class
-bengCall\admin\LoginAdminStepdefs.class
-bengCall\user\ServiceCustomerAPI.class
-bengCall\CucumberTestSuite.class
-bengCall\APIAndResponse\BengCallResponse.class
-bengCall\user\TransactionCustomerAPI.class

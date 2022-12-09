@@ -1,6 +1,0 @@
-"Story","Title","Result","Date","Stability","Duration (s)"
-"Service vehicle customer","Get all vehicle service with valid parameter id","SUCCESS","2022-12-07T00:21:09.2690077+07:00[Asia/Bangkok]","0.0","0.69"
-"Service vehicle customer","Get all Vehicle service with invalid parameter id","SUCCESS","2022-12-07T00:21:09.966488+07:00[Asia/Bangkok]","0.0","0.55"
-"Service vehicle customer","Get Vehicle service without id","SUCCESS","2022-12-07T00:21:10.5232978+07:00[Asia/Bangkok]","0.0","0.17"
-"Service vehicle customer","Get vehicle service customer with invalid path","SUCCESS","2022-12-07T00:21:10.7015651+07:00[Asia/Bangkok]","0.0","0.16"
-"Service vehicle customer","Get vehicle service customer with invalid token","SUCCESS","2022-12-07T00:21:10.8689548+07:00[Asia/Bangkok]","0.0","0.16"
