@@ -48,32 +48,7 @@
           "type": "string"
         },
         "detail": {
-          "type": "array",
-          "items": [
-            {
-              "type": "object",
-              "properties": {
-                "id": {
-                  "type": "integer"
-                },
-                "vehicle_name": {
-                  "type": "string"
-                },
-                "service_name": {
-                  "type": "string"
-                },
-                "sub_total": {
-                  "type": "integer"
-                }
-              },
-              "required": [
-                "id",
-                "vehicle_name",
-                "service_name",
-                "sub_total"
-              ]
-            }
-          ]
+          "type": "null"
         }
       },
       "required": [

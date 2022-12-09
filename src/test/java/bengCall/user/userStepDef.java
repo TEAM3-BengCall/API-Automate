@@ -96,7 +96,7 @@ public class userStepDef {
                 .header("Authorization", "Bearer " + userAPI.VALID_TOKEN)
                 .formParams("fullname",fullname)
                 .formParams("email",email)
-                .multiPart("images",new File("src/test/resources/jsonFile/jsonRequest/Homepage.jpg"));
+                .multiPart("images", new File("src/test/resources/JsonFile/Minionman.jpg"));
     }
 
     @When("Send update user put request valid path")
@@ -156,7 +156,7 @@ public class userStepDef {
                 .header("Authorization", "Bearer " + userAPI.EXPIRED_TOKEN)
                 .formParams("fullname","Destiana Ayu Aulia")
                 .formParams("email","destiana@gmail.com")
-                .multiPart("images",new File("src/test/resources/jsonFile/jsonRequest/Homepage.jpg"));
+                .multiPart("images",new File("src/test/resources/JsonFile/Minionman.jpg"));
     }
 
     //Scenario 8
