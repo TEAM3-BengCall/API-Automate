@@ -52,15 +52,15 @@ public class LoginStepDef {
 
     @Then("Response Api should return {int} Bad Request")
     public void responseApiShouldReturnBadRequest(int arg0) {
-        SerenityRest.rest().then().statusCode(arg0);
+        SerenityRest.then().statusCode(arg0);
     }
     @And("Validation Json Schema Login invalid")
     public void validationJsonSchemaLoginInvalid() {
-        File json = new File(BengcallAPI.JSON_SCHEMA+"/LoginPasswordEmailEmptyJsonSchema.json.json");
+        File json = new File(BengcallAPI.JSON_SCHEMA+"/LoginPasswordEmailEmptyJsonSchema.json");
         SerenityRest.then().assertThat().body(JsonSchemaValidator.matchesJsonSchema(json));
     }
-    @And("Response body {string}")
-    public void responseBody(String arg0) {
+    @And("Response body login {string}")
+    public void responseBodyLogin(String arg0) {
         SerenityRest.then().body(BangCallResponse.Massage,equalTo(arg0));
     }
 //Scenario 3
@@ -88,7 +88,7 @@ public class LoginStepDef {
     }
     @Then("Response Api should return  {int} Not Found")
     public void responseApiShouldReturnNotFound(int arg0) {
-        SerenityRest.rest().then().statusCode(arg0);
+        SerenityRest.then().statusCode(arg0);
     }
 
     @And("Validation Json Schema Login Not Found")

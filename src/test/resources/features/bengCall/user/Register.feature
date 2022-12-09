@@ -4,23 +4,23 @@ Feature: Register Users Feature
   Scenario: Register Users with valid credential
     Given post register customer with valid credential
     When send register request with valid path
-    Then Response Api should return 400 Created
+    Then Response Api should return 201 Created
     And Validation Json Schema Register succsess
-    And message "already exist"
+    And message "Success create new user"
 
-    Scenario: Register Users with password less than 8 characters
-      Given post register customer with invalid password
-      When send register request with valid path
-      Then Response Api should return 400 Bad Request
-      And Validation Json Schema Register Invalid
-      And Response body  "invalid password or fullname"
+  Scenario: Register Users with password less than 8 characters
+    Given post register customer with invalid password
+    When send register request with valid path
+    Then Response Api should return 400 Bad Request
+    And Validation Json Schema Register Invalid
+    And Response body "invalid password or fullname"
 
-      Scenario: Register Users without credentials
-        Given post register customer without credentials
-        When send register request with valid path
-        Then Response Api should return 400 Bad Request
-        And Validation Json Schema Register Invalid
-        And Response body  "invalid password or fullname"
+  Scenario: Register Users without credentials
+    Given post register customer without credentials
+    When send register request with valid path
+    Then Response Api should return 400 Bad Request
+    And Validation Json Schema Register Invalid
+    And Response body "invalid password or fullname"
 
         Scenario: Register Users with invalid path
           Given post register customer with valid credential
@@ -34,7 +34,7 @@ Feature: Register Users Feature
             When send register request with valid path
             Then Response Api should return 400 Bad Request
             And Validation Json Schema Register Invalid
-            And Response body  "invalid password or fullname"
+            And Response body "invalid password or fullname"
 
             Scenario: Register Users with two field mandatory is empty
               Given post register customer with two field mandatory is empty

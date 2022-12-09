@@ -6,8 +6,7 @@ import io.cucumber.java.en.When;
 import io.restassured.module.jsv.JsonSchemaValidator;
 import net.serenitybdd.rest.SerenityRest;
 import net.thucydides.core.annotations.Steps;
-import starter.bangCall.BangCallResponse;
-import starter.bangCall.BengcallAPI;
+
 
 import java.io.File;
 
