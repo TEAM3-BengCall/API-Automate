@@ -1,0 +1,5 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Transaction user","Get on going Transaction with valid parameter and valid token","SUCCESS","2022-12-07T00:21:15.9755783+07:00[Asia/Bangkok]","0.0","0.16"
+"Transaction user","Get detail transaction with valid parameter id","SUCCESS","2022-12-07T00:21:16.4508727+07:00[Asia/Bangkok]","0.0","0.19"
+"Transaction user","Get detail transaction with invalid parameter id","SUCCESS","2022-12-07T00:21:16.6538308+07:00[Asia/Bangkok]","0.0","0.15"
+"Transaction user","Get detail transaction with invalid token","SUCCESS","2022-12-07T00:21:16.8127373+07:00[Asia/Bangkok]","0.0","0.18"

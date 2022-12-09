@@ -1,0 +1,14 @@
+{
+  "location": 1,
+  "date": "",
+  "phone": "081234567890",
+  "address": "Jl. Pahlawan No. 32, Surabaya",
+  "other": null,
+  "detail": [
+    {
+      "vehicle_id": 42,
+      "service_id": 3288,
+      "sub-total": 50000
+    }
+  ]
+}
