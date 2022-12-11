@@ -70,4 +70,4 @@
   [![GitHub](https://img.shields.io/badge/GitHub-Jaelani%20Kusuma-white?style=for-the-badge&logo=github&color=white&labelColor=white&logoColor=black)](https://github.com/jaekusuma) <br>
   [![GitHub](https://img.shields.io/badge/GitHub-Destiana%20Ayu-white?style=for-the-badge&logo=github&color=white&labelColor=white&logoColor=black)](https://github.com/destnayu) <br>
   [![GitHub](https://img.shields.io/badge/GitHub-Syawalludin-white?style=for-the-badge&logo=github&color=white&labelColor=white&logoColor=black)](https://github.com/Syawalludin) <br>
-  [![GitHub](https://img.shields.io/badge/GitHub-Rivan%20Adi%20Putra-white?style=for-the-badge&logo=github&color=white&labelColor=white&logoColor=black)](https://github.com/RivanAP)
+  [![GitHub](https://img.shields.io/badge/GitHub-Rivan%20Adi%20Pratama-white?style=for-the-badge&logo=github&color=white&labelColor=white&logoColor=black)](https://github.com/RivanAP)
