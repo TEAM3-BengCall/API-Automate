@@ -32,7 +32,7 @@ public class HistoryStepDef {
     }
     @When("Validation Json Schema History Success")
     public void validationJson() {
-        File json = new File(BengcallAPI.JSON_SCHEMA+"/HistorySuccessJsonSchema.json");
+        File json = new File(BengcallAPI.JSON_SCHEMA+"/user/HistorySuccessJsonSchema.json");
         SerenityRest.then().assertThat().body(JsonSchemaValidator.matchesJsonSchema(json));
     }
     @And("response body {string}")
@@ -60,7 +60,7 @@ public class HistoryStepDef {
 
     @And("Validation Json Schema History Not Found")
     public void validationJsonSchemaHistoryNotFound() {
-        File json = new File(BengcallAPI.JSON_SCHEMA+"/HistoryNotFoundSjsonSchema.json");
+        File json = new File(BengcallAPI.JSON_SCHEMA+"/user/HistoryNotFoundSjsonSchema.json");
         SerenityRest.then().assertThat().body(JsonSchemaValidator.matchesJsonSchema(json));
     }
 
@@ -76,7 +76,7 @@ public class HistoryStepDef {
     }
     @And("Validation Json Schema Expired Token")
     public void validationJsonSchemaExpiredToken() {
-        File json = new File(BengcallAPI.JSON_SCHEMA+"/HistoryExpiredTokenJsonSchema.json");
+        File json = new File(BengcallAPI.JSON_SCHEMA+"/user/HistoryExpiredTokenJsonSchema.json");
         SerenityRest.then().assertThat().body(JsonSchemaValidator.matchesJsonSchema(json));
     }
     @Then("Response Api should return {int} Unauthorized")

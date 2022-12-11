@@ -6,7 +6,7 @@ Scenario: GET vehicle type available with valid token
   Given Get vehicle type available with valid token
   When Send request get vehicle type valid path
   Then API should return response 200 OK
-  And API should return body data data.id 86, data.name_vehicle "125cc - Revo" and message "success get all vehicle"
+  And API should return body data data.id 148, data.name_vehicle "NMax" and message "success get all vehicle"
   And Validate get vehicle type available success to json schema
 
 #Scenario 2

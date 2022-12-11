@@ -18,7 +18,7 @@ public class RegisteStepDef {
 
     @Given("post register customer with valid credential")
     public void postRegisterWithValidCredential() {
-        File json = new File(BengcallAPI.JSON_REQ_BODY+"/RegiterPost.json");
+        File json = new File(BengcallAPI.JSON_REQ_BODY+"/user/RegiterPost.json");
         bengcallAPIuser.postRegisterCustomer(json);
     }
     @When("send register request with valid path")
@@ -27,7 +27,7 @@ public class RegisteStepDef {
     }
     @And("Validation Json Schema Register succsess")
     public void validationJsonSchemaRegister() {
-        File json = new File(BengcallAPI.JSON_SCHEMA+"/PostRegiterSuccessJsonSchema.json");
+        File json = new File(BengcallAPI.JSON_SCHEMA+"/user/PostRegiterSuccessJsonSchema.json");
         SerenityRest.then().assertThat().body(JsonSchemaValidator.matchesJsonSchema(json));
     }
     @Then("Response Api should return {int} Created")
@@ -47,12 +47,12 @@ public class RegisteStepDef {
 //Scenario 2
     @Given("post register customer with invalid password")
     public void postRegisterCustomerWithInvalidPassword() {
-        File json = new File(BengcallAPI.JSON_REQ_BODY+"/RegisterPasswordLess8CharBody.json");
+        File json = new File(BengcallAPI.JSON_REQ_BODY+"/user/RegisterPasswordLess8CharBody.json");
         bengcallAPIuser.postRegisterCustomer(json);
     }
     @And("Validation Json Schema Register Invalid")
     public void validationJsonSchemaRegisterInvalid() {
-        File json = new File(BengcallAPI.JSON_SCHEMA+"/InvalidEmailPasswordRegisterJsonSchema.json");
+        File json = new File(BengcallAPI.JSON_SCHEMA+"/user/InvalidEmailPasswordRegisterJsonSchema.json");
         SerenityRest.then().assertThat().body(JsonSchemaValidator.matchesJsonSchema(json));
     }
     @And("Response body {string}")
@@ -62,7 +62,7 @@ public class RegisteStepDef {
 //Scenario 3
     @Given("post register customer without credentials")
     public void postRegisterCustomerWithoutCredentials() {
-        File json = new File(BengcallAPI.JSON_REQ_BODY+"/RegisterInvalidCredentialBody.json");
+        File json = new File(BengcallAPI.JSON_REQ_BODY+"/user/RegisterInvalidCredentialBody.json");
         bengcallAPIuser.postRegisterCustomer(json);
     }
     @When("send Register request with invalid path")
@@ -71,19 +71,19 @@ public class RegisteStepDef {
     }
     @And("Validation Json Schema Not Found")
     public void validationJsonSchemaNotFound() {
-        File json = new File(BengcallAPI.JSON_SCHEMA+"/RegisterNotFoundJsonSchema.json");
+        File json = new File(BengcallAPI.JSON_SCHEMA+"/user/RegisterNotFoundJsonSchema.json");
         SerenityRest.then().assertThat().body(JsonSchemaValidator.matchesJsonSchema(json));
     }
 // Scenario 4
     @Given("post register customer with one field mandatory is empty")
     public void postRegisterCustomerWithOneFieldMandatoryIsEmpty() {
-        File json = new File(BengcallAPI.JSON_REQ_BODY+"/RegisterOneMandatoryEmptyBody.json");
+        File json = new File(BengcallAPI.JSON_REQ_BODY+"/user/RegisterOneMandatoryEmptyBody.json");
         bengcallAPIuser.postRegisterCustomer(json);
     }
 // Scenario 5
     @Given("post register customer with two field mandatory is empty")
     public void postRegisterCustomerWithTwoFieldMandatoryIsEmpty() {
-        File json = new File(BengcallAPI.JSON_REQ_BODY+"/RegisterTwoMandatoryEmpty.json");
+        File json = new File(BengcallAPI.JSON_REQ_BODY+"/user/RegisterTwoMandatoryEmpty.json");
         bengcallAPIuser.postRegisterCustomer(json);
     }
 

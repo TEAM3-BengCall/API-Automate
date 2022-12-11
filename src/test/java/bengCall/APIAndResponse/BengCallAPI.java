@@ -5,12 +5,12 @@ public class BengCallAPI {
 
     //Folder
     public static final String DIR = System.getProperty("user.dir");
-    public static final String JSON_FILE = DIR + "/src/test/resources/JsonFile";
-    public static final String JSON_REQ_BODY_ADMIN = JSON_FILE + "/JsonRequestBody/Admin/Login";
-    public static final String JSON_SCHEMA_VAL_ADMIN = JSON_FILE + "/JsonSchemaValidation/Admin/Login";
-    public static final String JSON_SCHEMA_VAL_USER = JSON_FILE + "/JsonSchemaValidation/User/ServiceVehicle";
-    public static final String JSON_REQ_BODY_TRANSACTION = JSON_FILE + "/JsonRequestBody/User/TransactionUser";
-    public static final String JSON_SCHEMA_TRANSACTION = JSON_FILE + "/JsonSchemaValidation/User/Transaction";
+    public static final String JSON_FILE = DIR + "/src/test/resources/jsonFile";
+    public static final String JSON_REQ_BODY_ADMIN = JSON_FILE + "/jsonReqBody/admin/Login";
+    public static final String JSON_SCHEMA_VAL_ADMIN = JSON_FILE + "/jsonSchema/admin/Login";
+    public static final String JSON_SCHEMA_VAL_USER = JSON_FILE + "/jsonSchema/user/ServiceVehicle";
+    public static final String JSON_REQ_BODY_TRANSACTION = JSON_FILE + "/jsonReqBody/user/TransactionUser";
+    public static final String JSON_SCHEMA_TRANSACTION = JSON_FILE + "/jsonSchema/user/Transaction";
 
     //URL Login
     public static final String POST_LOGIN_ADMIN = BASE_URL + "/login";

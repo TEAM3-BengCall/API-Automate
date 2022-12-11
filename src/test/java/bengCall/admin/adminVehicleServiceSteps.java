@@ -21,7 +21,7 @@ public class adminVehicleServiceSteps {
 
     @And("Validate list vehicle service json schema")
     public void validateListVehicleServiceJsonSchema() {
-        File jsonFile = new File(JSON_FILE+"/jsonSchema/adminVehicleService/adminVehicleService.json");
+        File jsonFile = new File(JSON_FILE+"/jsonSchema/admin/adminVehicleService/adminVehicleService.json");
         methodAdminAPI.validateJsonSchema(jsonFile);
     }
 
