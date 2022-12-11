@@ -9,8 +9,8 @@ import java.io.File;
 public class BengcallAPI {
     public static final String URL = "http://project-edu.online";
     public static final String DIR = System.getProperty("user.dir");
-    public static final String JSON_REQ_BODY = DIR+"/src/test/resources/JSON/RequestBody";
-    public static final String JSON_SCHEMA = DIR+"/src/test/resources/JSON/JsonSchema";
+    public static final String JSON_REQ_BODY = DIR+"/src/test/resources/jsonFile/jsonReqBody";
+    public static final String JSON_SCHEMA = DIR+"/src/test/resources/jsonFile/jsonSchema";
     public static final String POST_REGISTER_USER_VALID_PATH = URL+"/register";
     public static final String POST_REGISTER_USER_INVALID_PATH = URL+"/registerr";
     public static final String POST_LOGIN_USER_VALID_PATH = URL+"/login";

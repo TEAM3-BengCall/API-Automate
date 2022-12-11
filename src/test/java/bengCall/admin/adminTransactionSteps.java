@@ -24,7 +24,7 @@ public class adminTransactionSteps {
 
     @And("Validate single transaction json schema")
     public void validateSingleTransactionJsonSchema() {
-        File jsonFile = new File(JSON_FILE+"/jsonSchema/adminTransaction/adminSingleTransaction.json");
+        File jsonFile = new File(JSON_FILE+"/jsonSchema/admin/adminTransaction/adminSingleTransaction.json");
         methodAdminAPI.validateJsonSchema(jsonFile);
     }
 
@@ -68,7 +68,7 @@ public class adminTransactionSteps {
 
     @And("Validate get all transaction json schema")
     public void validateGetAllTransactionJsonSchema() {
-        File jsonFile = new File(JSON_FILE+"/jsonSchema/adminTransaction/adminAllTransaction.json");
+        File jsonFile = new File(JSON_FILE+"/jsonSchema/admin/adminTransaction/adminAllTransaction.json");
         methodAdminAPI.validateJsonSchema(jsonFile);
     }
 
@@ -79,7 +79,7 @@ public class adminTransactionSteps {
 
     @Given("Set put update transaction with valid {int}")
     public void setPutUpdateTransactionWithValidId(int id) {
-        File jsonFile = new File(JSON_FILE+"/jsonReqBody/adminTransaction/adminUpdateTransaction.json");
+        File jsonFile = new File(JSON_FILE+"/jsonReqBody/admin/adminTransaction/adminUpdateTransaction.json");
         methodAdminAPI.sendReqBodyWithValidTokenAndParam(id,jsonFile);
     }
 
@@ -90,7 +90,7 @@ public class adminTransactionSteps {
 
     @And("Validate update transaction json schema")
     public void validateUpdateTransactionJsonSchema() {
-        File jsonFile = new File(JSON_FILE+"/jsonSchema/adminTransaction/adminUpdateTransaction.json");
+        File jsonFile = new File(JSON_FILE+"/jsonSchema/admin/adminTransaction/adminUpdateTransaction.json");
         methodAdminAPI.validateJsonSchema(jsonFile);
     }
 

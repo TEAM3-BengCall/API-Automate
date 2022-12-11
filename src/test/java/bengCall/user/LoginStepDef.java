@@ -16,7 +16,7 @@ public class LoginStepDef {
     @Steps BengcallAPI bengcallAPIuser;
     @Given("post login with valid credentials")
     public void postLoginWithValidCredential() {
-        File json = new File(BengcallAPI.JSON_REQ_BODY+"/RegiterPost.json");
+        File json = new File(BengcallAPI.JSON_REQ_BODY+"/user/RegiterPost.json");
         bengcallAPIuser.postLoginCustomer(json);
     } 
     @When("send post login request with valid path")
@@ -30,7 +30,7 @@ public class LoginStepDef {
     }
     @And("Validation Json Schema Succsess Login")
     public void validationJsonSchemaSuccsessLogin() {
-        File json = new File(BengcallAPI.JSON_SCHEMA+"/LoginSuccessLoginJsonSchema.json");
+        File json = new File(BengcallAPI.JSON_SCHEMA+"/user/LoginSuccessLoginJsonSchema.json");
         SerenityRest.then().assertThat().body(JsonSchemaValidator.matchesJsonSchema(json));
     }
     @And("Response body  {string}, fullname {string}, role {int}")
@@ -42,7 +42,7 @@ public class LoginStepDef {
 //Scenario 2
     @Given("post login with email field is empty")
     public void postLoginWithEmailFieldIsEmpty() {
-        File json = new File(BengcallAPI.JSON_REQ_BODY+"/loginEmailEmptBody.json");
+        File json = new File(BengcallAPI.JSON_REQ_BODY+"/user/loginEmailEmptBody.json");
         bengcallAPIuser.postLoginCustomer(json);
     }
     @When("send post request with valid path")
@@ -56,7 +56,7 @@ public class LoginStepDef {
     }
     @And("Validation Json Schema Login invalid")
     public void validationJsonSchemaLoginInvalid() {
-        File json = new File(BengcallAPI.JSON_SCHEMA+"/LoginPasswordEmailEmptyJsonSchema.json");
+        File json = new File(BengcallAPI.JSON_SCHEMA+"/user/LoginPasswordEmailEmptyJsonSchema.json");
         SerenityRest.then().assertThat().body(JsonSchemaValidator.matchesJsonSchema(json));
     }
     @And("Response body login {string}")
@@ -66,20 +66,20 @@ public class LoginStepDef {
 //Scenario 3
     @Given("post login customer with Password field is empty")
     public void postLoginCustomerWithPasswordFieldIsEmpty() {
-        File json = new File(BengcallAPI.JSON_REQ_BODY+"/LoginPasswordEmptyBody.json");
+        File json = new File(BengcallAPI.JSON_REQ_BODY+"/user/LoginPasswordEmptyBody.json");
         bengcallAPIuser.postLoginCustomer(json);
     }
 //Scenario 4
     @Given("post login customer without credentials")
     public void postLoginCustomerWithoutCredentials() {
-        File json = new File(BengcallAPI.JSON_REQ_BODY+"/LoginWithoutCredentialBody.json");
+        File json = new File(BengcallAPI.JSON_REQ_BODY+"/user/LoginWithoutCredentialBody.json");
         bengcallAPIuser.postLoginCustomer(json);
     }
 
     //Scenario 5
     @Given("post login customer with valid credentials")
     public void postLoginCustomerWithValidCredentials() {
-        File json = new File(BengcallAPI.JSON_REQ_BODY+"/loginBody.json");
+        File json = new File(BengcallAPI.JSON_REQ_BODY+"/user/loginBody.json");
         bengcallAPIuser.postLoginCustomer(json);
     }
     @When("send post request with invalid path")
@@ -93,7 +93,7 @@ public class LoginStepDef {
 
     @And("Validation Json Schema Login Not Found")
     public void validationJsonSchemaLoginNotFound() {
-        File json = new File(BengcallAPI.JSON_SCHEMA+"/LoginNotFoundJsonSchema.json");
+        File json = new File(BengcallAPI.JSON_SCHEMA+"/user/LoginNotFoundJsonSchema.json");
         SerenityRest.then().assertThat().body(JsonSchemaValidator.matchesJsonSchema(json));
     }
 

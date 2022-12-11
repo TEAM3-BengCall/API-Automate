@@ -16,7 +16,7 @@ import static org.hamcrest.Matchers.not;
 public class LoginAdminStepdefs {
 
     @Steps
-    AdminLoginAPI adminLoginAPI;
+    methodAdminAPI adminLoginAPI;
 
     //Login Admin with Valid data
     @Given("User login with valid data file json")

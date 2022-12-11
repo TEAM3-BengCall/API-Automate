@@ -23,7 +23,7 @@ public class adminVehicleSteps {
 
     @And("Validate all vehicle json schema")
     public void validateAllVehicleJsonSchema() {
-        File jsonFile = new File(JSON_FILE+"/jsonSchema/adminVehicle/adminAllVehicle.json");
+        File jsonFile = new File(JSON_FILE+"/jsonSchema/admin/adminVehicle/adminAllVehicle.json");
         methodAdminAPI.validateJsonSchema(jsonFile);
     }
 
@@ -34,7 +34,7 @@ public class adminVehicleSteps {
 
     @Given("Set create new vehicle type with valid request body")
     public void setCreateNewVehicleTypeWithValidRequestBody() {
-        File jsonFile = new File(JSON_FILE+"/jsonReqBody/adminVehicle/adminNewVehicle.json");
+        File jsonFile = new File(JSON_FILE+"/jsonReqBody/admin/adminVehicle/adminNewVehicle.json");
         methodAdminAPI.sendReqBodyWithValidToken(jsonFile);
 
     }
@@ -46,7 +46,7 @@ public class adminVehicleSteps {
 
     @And("Validate create new vehicle type json schema")
     public void validateCreateNewVehicleTypeJsonSchema() {
-        File jsonFile = new File(JSON_FILE+"/jsonSchema/adminVehicle/adminNewVehicleType.json");
+        File jsonFile = new File(JSON_FILE+"/jsonSchema/admin/adminVehicle/adminNewVehicleType.json");
         methodAdminAPI.validateJsonSchema(jsonFile);
     }
 
@@ -59,25 +59,25 @@ public class adminVehicleSteps {
 
     @Given("Set create new vehicle type with empty request body")
     public void setCreateNewVehicleTypeWithEmptyRequestBody() {
-        File jsonFile = new File(JSON_FILE+"/jsonReqBody/adminVehicle/adminInvalidNewVehicle.json");
+        File jsonFile = new File(JSON_FILE+"/jsonReqBody/admin/adminVehicle/adminInvalidNewVehicle.json");
         methodAdminAPI.sendReqBodyWithValidToken(jsonFile);
     }
 
     @And("Validate create invalid new vehicle type json schema")
     public void validateCreateInvalidNewVehicleTypeJsonSchema() {
-        File jsonFile = new File(JSON_FILE+"/jsonSchema/adminTransaction/adminInvalidTransaction.json");
+        File jsonFile = new File(JSON_FILE+"/jsonSchema/admin/adminTransaction/adminInvalidTransaction.json");
         methodAdminAPI.validateJsonSchema(jsonFile);
     }
 
     @And("Validate create new with invalid token auth json schema")
     public void validateCreateNewWithInvalidTokenAuthJsonSchema() {
-        File jsonFile = new File(JSON_FILE+"/jsonSchema/adminTransaction/adminInvalidTransaction.json");
+        File jsonFile = new File(JSON_FILE+"/jsonSchema/admin/adminTransaction/adminInvalidTransaction.json");
         methodAdminAPI.validateJsonSchema(jsonFile);
     }
 
     @Given("Set create new vehicle type with invalid token auth")
     public void setCreateNewVehicleTypeWithInvalidTokenAuth() {
-        File jsonFile = new File(JSON_FILE+"/jsonReqBody/adminVehicle/adminNewVehicle.json");
+        File jsonFile = new File(JSON_FILE+"/jsonReqBody/admin/adminVehicle/adminNewVehicle.json");
         methodAdminAPI.sendReqBodyWithInvalidToken(jsonFile);
     }
 

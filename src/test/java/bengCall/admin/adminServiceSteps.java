@@ -32,7 +32,7 @@ public class adminServiceSteps {
 
     @And("Validate json schema")
     public void validateJsonSchema() {
-        File jsonFile = new File(JSON_FILE+"/jsonSchema/adminTransaction/adminInvalidTransaction.json");
+        File jsonFile = new File(JSON_FILE+"/jsonSchema/admin/adminTransaction/adminInvalidTransaction.json");
         methodAdminAPI.validateJsonSchema(jsonFile);
     }
 
@@ -48,7 +48,7 @@ public class adminServiceSteps {
 
     @And("Validate invalid json schema")
     public void validateInvalidJsonSchema() {
-        File jsonFile = new File(JSON_FILE+"/jsonSchema/adminService/adminServiceInvalid.json");
+        File jsonFile = new File(JSON_FILE+"/jsonSchema/admin/adminService/adminServiceInvalid.json");
         methodAdminAPI.validateJsonSchema(jsonFile);
     }
 
@@ -59,7 +59,7 @@ public class adminServiceSteps {
 
     @Given("Set create new service with valid request body")
     public void setCreateNewServiceWithValidRequestBody() {
-        File jsonFile = new File(JSON_FILE+"/jsonReqBody/adminService/adminNewServiceType.json");
+        File jsonFile = new File(JSON_FILE+"/jsonReqBody/admin/adminService/adminNewServiceType.json");
         methodAdminAPI.sendReqBodyWithValidToken(jsonFile);
     }
 
@@ -75,7 +75,7 @@ public class adminServiceSteps {
 
     @And("Validate creat new service type json schema")
     public void validateCreatNewServiceTypeJsonSchema() {
-        File jsonFile = new File(JSON_FILE+"/jsonSchema/adminService/adminNewServiceType.json");
+        File jsonFile = new File(JSON_FILE+"/jsonSchema/admin/adminService/adminNewServiceType.json");
         methodAdminAPI.validateJsonSchema(jsonFile);
     }
 
@@ -90,7 +90,7 @@ public class adminServiceSteps {
 
     @Given("Set create new service with request body empty vehicle id value")
     public void setCreateNewServiceWithRequestBodyEmptyVehicleIdValue() {
-        File jsonFile = new File(JSON_FILE+"/jsonReqBody/adminService/adminNewServiceWithEmptyVehicleIdValue.json");
+        File jsonFile = new File(JSON_FILE+"/jsonReqBody/admin/adminService/adminNewServiceWithEmptyVehicleIdValue.json");
         methodAdminAPI.sendReqBodyWithValidToken(jsonFile);
     }
 
@@ -101,7 +101,7 @@ public class adminServiceSteps {
 
     @And("Validate invalid create json schema")
     public void validateCreateNewWithEmptyVehicleIdValueJsonSchema() {
-        File jsonFile = new File(JSON_FILE+"/jsonSchema/adminService/adminServiceInvalid.json");
+        File jsonFile = new File(JSON_FILE+"/jsonSchema/admin/adminService/adminServiceInvalid.json");
         methodAdminAPI.validateJsonSchema(jsonFile);
     }
 
@@ -112,19 +112,19 @@ public class adminServiceSteps {
 
     @Given("Set create new service with request body empty service name value")
     public void setCreateNewServiceWithRequestBodyEmptyServiceNameValue() {
-        File jsonFile = new File(JSON_FILE+"/jsonReqBody/adminService/adminNewServiceWithEmptyServiceNameValue.json");
+        File jsonFile = new File(JSON_FILE+"/jsonReqBody/admin/adminService/adminNewServiceWithEmptyServiceNameValue.json");
         methodAdminAPI.sendReqBodyWithValidToken(jsonFile);
     }
 
     @Given("Set create new service with request body empty price value")
     public void setCreateNewServiceWithRequestBodyEmptyPriceValue() {
-        File jsonFile = new File(JSON_FILE+"/jsonReqBody/adminService/adminNewServiceWithEmptyPriceValue.json");
+        File jsonFile = new File(JSON_FILE+"/jsonReqBody/admin/adminService/adminNewServiceWithEmptyPriceValue.json");
         methodAdminAPI.sendReqBodyWithValidToken(jsonFile);
     }
 
     @Given("Set create new service with empty request body")
     public void setCreateNewServiceWithEmptyRequestBody() {
-        File jsonFile = new File(JSON_FILE+"/jsonReqBody/adminService/adminNewServiceWithEmptyValue.json");
+        File jsonFile = new File(JSON_FILE+"/jsonReqBody/admin/adminService/adminNewServiceWithEmptyValue.json");
         methodAdminAPI.sendReqBodyWithValidToken(jsonFile);
     }
 
@@ -145,7 +145,7 @@ public class adminServiceSteps {
 
     @And("Validate delete json schema")
     public void validateDeleteJsonSchema() {
-        File jsonFile = new File(JSON_FILE+"/jsonSchema/adminService/adminServiceInvalid.json");
+        File jsonFile = new File(JSON_FILE+"/jsonSchema/admin/adminService/adminServiceInvalid.json");
         methodAdminAPI.validateJsonSchema(jsonFile);
     }
 

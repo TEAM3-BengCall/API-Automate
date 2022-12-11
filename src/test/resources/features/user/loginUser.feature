@@ -5,7 +5,7 @@ Feature: Login User Feature
     When send post login request with valid path
     Then Response Api should return 202 Accepted
     And Validation Json Schema Succsess Login
-    And Response body  "Success to login", fullname "Destiana Ayu", role 0
+    And Response body  "Success to login", fullname "Ridsjfhdsajsd", role 0
 
     Scenario:Login customer with invalid credential
       Given post login with email field is empty
